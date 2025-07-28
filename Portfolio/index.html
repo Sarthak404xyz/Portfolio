@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #e0e0e0; /* softer background */
+      color: #2b2b2b;
+    }
+
+    header {
+      background-color: #f0f0f0;
+      text-align: center;
+      padding: 35px 10px 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .profile-img {
+      width: 85px;
+      height: 85px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 12px;
+    }
+
+    header h1 {
+      margin: 10px 0 5px;
+      color: #1572A1; /* softer blue */
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #1572A1;
+    }
+
+    nav button {
+      background: none;
+      border: none;
+      color: white;
+      padding: 15px 25px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    nav button:hover {
+      background-color: #105c82;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.08);
+    }
+
+    .section {
+      display: none;
+    }
+
+    .section.active {
+      display: block;
+    }
+
+    h2 {
+      color: #1572A1;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="photo.png" alt="Profile" class="profile-img">
+    <h1>Sarthak Singh</h1>
+    <p>Student | Web Development Learner</p>
+  </header>
+
+  <nav>
+    <button onclick="showSection('about')">About</button>
+    <button onclick="showSection('projects')">My Projects</button>
+    <button onclick="showSection('contact')">Contact Me</button>
+  </nav>
+
+  <div class="container">
+    <div id="about" class="section active">
+      <h2>About Me</h2>
+      <p>Hello! I'm Sarthak, currently in my 2nd year of EXTC at Pillai College of Engineering. I enjoy coding and this is my first portfolio project using HTML, CSS and JavaScript.</p>
+    </div>
+
+    <div id="projects" class="section">
+      <h2> My Projects</h2>
+      <ul>
+        <li>Portfolio Website </li>
+        <li>Mini Game using Python and Pygame</li>
+        <li>Basic Python Programming</li>
+      </ul>
+    </div>
+
+    <div id="contact" class="section">
+      <h2>Contact Me</h2>
+      <p>Email: ************@gmail.com</p>
+      <p>GitHub: https://github.com/Sarthak404xyz</p>
+      <p>Linkedln: www.linkedin.com/in/sarthak-singh-55354433b</p>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Sarthak Singh. All rights reserved.
+  </footer>
+
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('.section');
+      sections.forEach(section => section.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
